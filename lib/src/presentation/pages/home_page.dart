@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:provider/provider.dart';
-
-import 'package:bmi/src/logic/controllers/values_controller.dart';
 import 'package:bmi/src/presentation/components/age/age_box.dart';
 import 'package:bmi/src/presentation/components/button/calculate_button.dart';
 import 'package:bmi/src/presentation/components/image/show_image.dart';

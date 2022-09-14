@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:bmi/src/logic/controllers/bmi_controller.dart';
 import 'package:bmi/src/logic/controllers/values_controller.dart';
 import 'package:bmi/src/logic/models/bmi_model.dart';
-import 'package:bmi/src/logic/models/people_model.dart';
 
 import 'src/presentation/pages/home_page.dart';
 
@@ -30,6 +29,7 @@ class AppWidget extends StatelessWidget {
         ),
       ],
       child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: HomePage(),
       ),
     );

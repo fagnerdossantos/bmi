@@ -4,8 +4,8 @@ import 'package:bmi/src/logic/models/people_model.dart';
 
 modelBottomSheet(BuildContext context, Size size, PeopleModel model) {
   List<String> modelData = [
-    "Altura -> ${model.height}",
-    "Peso -> ${model.weight}",
+    "Altura -> ${model.height.toStringAsPrecision(3)}",
+    "Peso -> ${model.weight.toInt()}",
     "IMC -> ${model.bmi.toStringAsPrecision(3)}",
     "Status -> ${model.result}",
   ];
