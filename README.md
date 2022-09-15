@@ -4,6 +4,7 @@
  The application will indicate if you are **"Helthy"** or not based in your height and weight.
 
 ## Video
+> runing in emulator...
 
 https://user-images.githubusercontent.com/61123877/190505495-7c14aa27-22f2-415c-b447-ae1bc04139bc.mp4
 
