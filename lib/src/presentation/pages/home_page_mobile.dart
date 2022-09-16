@@ -5,9 +5,10 @@ import 'package:bmi/src/presentation/components/button/calculate_button.dart';
 import 'package:bmi/src/presentation/components/image/show_image.dart';
 import 'package:bmi/src/presentation/components/slider/height_slider_box.dart';
 import 'package:bmi/src/presentation/components/weight/weight_box.dart';
+import 'package:bmi/utils/consts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePageMobile extends StatelessWidget {
+  const HomePageMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
 
         child: Padding(
           // Home Padding
-          padding: const EdgeInsets.all(20.0),
+          padding: paddingTwenty,
 
           child: Column(
             // Alignment

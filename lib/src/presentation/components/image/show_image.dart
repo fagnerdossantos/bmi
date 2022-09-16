@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:bmi/utils/consts.dart';
+
 class ShowImage extends StatelessWidget {
   final Size size;
   final List<String> images;
@@ -20,16 +22,16 @@ class ShowImage extends StatelessWidget {
       width: width,
 
       // Padding
-      padding: const EdgeInsets.all(20),
+      padding: paddingTwenty,
 
       // Styling
       decoration: BoxDecoration(
         // Border
         border: Border.all(
-          color: Colors.black,
+          color: black,
           width: 1,
         ),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: radiusTwenty,
       ),
 
       child: Row(
@@ -43,7 +45,7 @@ class ShowImage extends StatelessWidget {
               ),
               height: height * .2,
               width: width * .3,
-              color: Colors.grey,
+              color: grey,
             ),
         ],
       ),

@@ -6,7 +6,7 @@ import 'package:bmi/src/logic/controllers/bmi_controller.dart';
 import 'package:bmi/src/logic/controllers/values_controller.dart';
 import 'package:bmi/src/logic/models/bmi_model.dart';
 
-import 'src/presentation/pages/home_page.dart';
+import 'src/presentation/pages/home_page_mobile.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -30,7 +30,9 @@ class AppWidget extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+
+        // Layout Builder
+        home: HomePageMobile(),
       ),
     );
   }

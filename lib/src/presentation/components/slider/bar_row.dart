@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:bmi/utils/consts.dart';
+
 class BarRow extends StatelessWidget {
   final Size size;
   const BarRow({super.key, required this.size});
@@ -23,10 +25,10 @@ class BarRow extends StatelessWidget {
               // Styling
               decoration: BoxDecoration(
                 // Color
-                color: Colors.grey,
+                color: grey,
 
                 // Shape
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: radiusTwenty,
               ),
             ),
           ),

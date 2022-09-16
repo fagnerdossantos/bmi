@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bmi/src/logic/models/people_model.dart';
+import 'package:bmi/utils/consts.dart';
 
 modelBottomSheet(BuildContext context, Size size, PeopleModel model) {
   List<String> modelData = [
@@ -46,10 +47,10 @@ modelBottomSheet(BuildContext context, Size size, PeopleModel model) {
               // Styling
               decoration: BoxDecoration(
                 // Color
-                color: Colors.black,
+                color: black,
 
                 // Shape
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: radiusTwenty,
               ),
               child: GestureDetector(
                 // Action
@@ -60,7 +61,7 @@ modelBottomSheet(BuildContext context, Size size, PeopleModel model) {
                   child: Text(
                     "FECHAR",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: white,
                     ),
                   ),
                 ),

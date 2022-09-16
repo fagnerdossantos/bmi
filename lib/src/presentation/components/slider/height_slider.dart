@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:bmi/src/logic/controllers/values_controller.dart';
+import 'package:bmi/utils/consts.dart';
 
 class HeightSlider extends StatelessWidget {
   const HeightSlider({super.key});
@@ -17,7 +18,7 @@ class HeightSlider extends StatelessWidget {
       min: 0,
       max: 3,
       divisions: 300,
-      activeColor: Colors.black,
+      activeColor: black,
       onChanged: (value) {
         controller.newHeight(value);
       },

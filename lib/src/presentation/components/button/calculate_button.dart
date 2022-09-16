@@ -6,6 +6,7 @@ import 'package:bmi/src/logic/controllers/bmi_controller.dart';
 import 'package:bmi/src/logic/controllers/values_controller.dart';
 import 'package:bmi/src/logic/models/people_model.dart';
 import 'package:bmi/src/presentation/components/modelBotomSheet/model_bottom_sheet.dart';
+import 'package:bmi/utils/consts.dart';
 
 class CalulateButton extends StatelessWidget {
   final Size size;
@@ -47,16 +48,18 @@ class CalulateButton extends StatelessWidget {
           // Styling
           decoration: BoxDecoration(
             // Color
-            color: Colors.black,
+            color: black,
 
             // Shape
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: radiusTwenty,
           ),
 
           child: const Center(
             child: Text(
               "Calcular",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                color: white,
+              ),
             ),
           ),
         ),

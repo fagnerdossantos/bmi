@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bmi/src/presentation/components/weight/weight_picker.dart';
+import 'package:bmi/utils/consts.dart';
 
 class WeightBox extends StatelessWidget {
   final Size size;
@@ -24,16 +25,12 @@ class WeightBox extends StatelessWidget {
       child: DecoratedBox(
         // Styling
         decoration: BoxDecoration(
-          // Shape
-          border: Border.all(
-            color: Colors.black,
-            width: 1,
-          ),
-
-          borderRadius: BorderRadius.circular(
-            20,
-          ),
-        ),
+            // Shape
+            border: Border.all(
+              color: black,
+              width: 1,
+            ),
+            borderRadius: radiusTwenty),
 
         child: Column(
           // Alignment
@@ -41,7 +38,7 @@ class WeightBox extends StatelessWidget {
 
           children: [
             // Label
-            const Text("PESO (em kg)"),
+            const Text("PESO em (kg)"),
 
             // Give Some Space
             SizedBox(

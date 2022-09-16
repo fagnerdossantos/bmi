@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:bmi/src/presentation/components/age/age_button.dart';
 import 'package:bmi/src/presentation/components/age/age_text.dart';
+import 'package:bmi/utils/consts.dart';
 
 class AgeBox extends StatelessWidget {
   final Size size;
@@ -26,13 +27,11 @@ class AgeBox extends StatelessWidget {
         decoration: BoxDecoration(
           // Shape
           border: Border.all(
-            color: Colors.black,
+            color: black,
             width: 1,
           ),
 
-          borderRadius: BorderRadius.circular(
-            20,
-          ),
+          borderRadius: radiusTwenty
         ),
 
         child: Column(

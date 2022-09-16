@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bmi/src/presentation/components/slider/bar_row.dart';
 import 'package:bmi/src/presentation/components/slider/height_slider.dart';
 import 'package:bmi/src/presentation/components/slider/height_text.dart';
+import 'package:bmi/utils/consts.dart';
 
 class HeightSliderBox extends StatelessWidget {
   final Size size;
@@ -27,10 +28,10 @@ class HeightSliderBox extends StatelessWidget {
       decoration: BoxDecoration(
         // Border
         border: Border.all(
-          color: Colors.black,
+          color: black,
           width: 1,
         ),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: radiusTwenty,
       ),
 
       child: Column(
@@ -38,8 +39,22 @@ class HeightSliderBox extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
         children: [
-          // Show hight
-          const HeightText(),
+          Row(
+            // Alignment
+
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Label
+              const Text("ALTURA em (cm)"),
+
+              SizedBox(
+                width: width * 0.02,
+              ),
+
+              // Show hight
+              const HeightText(),
+            ],
+          ),
 
           // Slider
           const HeightSlider(),

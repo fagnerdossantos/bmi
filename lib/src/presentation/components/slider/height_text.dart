@@ -14,6 +14,9 @@ class HeightText extends StatelessWidget {
 
     return Text(
       controller.height.toStringAsPrecision(3).replaceAll(".", ","),
+      style: const TextStyle(
+        fontSize: 20,
+      ),
     );
   }
 }
