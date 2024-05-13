@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
-class ButtonNavigation extends StatelessWidget {
-  final String rout, label;
+class CustomButton extends StatelessWidget {
+  final String label;
   final IconData icon;
-  const ButtonNavigation({
+  final Function() callBack;
+  const CustomButton({
     super.key,
-    required this.rout,
     required this.label,
     required this.icon,
+    required this.callBack,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () => Navigator.pushNamed(context, rout),
+      onPressed: callBack,
       icon: Icon(icon),
       label: Text(label),
     );

@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:bmi/src/logic/models/stats_model.dart';
+import 'package:bmi/src/presentation/components/bottomSheet/tips_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 import '../components/graphic/custom_circle_graphic.dart';
@@ -11,6 +13,8 @@ class ResultView extends StatelessWidget {
     // Get Screen Size
     final Size size = MediaQuery.sizeOf(context);
     final (height, width) = (size.height, size.width);
+
+    final model = ModalRoute.of(context)!.settings.arguments as StatsModel;
 
     return Scaffold(
       // Bar
@@ -35,7 +39,7 @@ class ResultView extends StatelessWidget {
                 CustomPaint(
                   size: Size(width * .6, height * .3),
                   painter: CustomCircleGraph(
-                    bmi: 25,
+                    bmi: model.bmi,
                     context: context,
                   ),
                 ),
@@ -43,15 +47,16 @@ class ResultView extends StatelessWidget {
             ),
 
             Text(
-              "Magreza",
+              model.classification.toUpperCase(),
               style: TextStyle(
-                  fontSize: 25,
-                  color: Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.w700),
+                fontSize: 25,
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.w700,
+              ),
             ),
 
             Text(
-              texts[0],
+              model.message,
               style: TextStyle(
                 fontSize: 16,
                 color: Theme.of(context).colorScheme.secondary,
@@ -61,7 +66,7 @@ class ResultView extends StatelessWidget {
             ),
 
             TextButton.icon(
-              onPressed: () {},
+              onPressed: () => tipsBottomSheet(context, size, model),
               icon: const Icon(Icons.lightbulb),
               label: const Text("Tips"),
             ),
@@ -71,11 +76,3 @@ class ResultView extends StatelessWidget {
     );
   }
 }
-
-List<String> texts = [
-  "Seu IMC indica que você está abaixo do peso ideal. É importante buscar orientação médica e nutricional para garantir uma alimentação saudável e balanceada, evitando riscos à saúde.",
-  """Aumente o consumo de calorias de forma saudável, incluindo alimentos ricos em proteínas, carboidratos complexos e gorduras boas.
-Consulte um nutricionista para elaborar um plano alimentar personalizado.
-Pratique exercícios físicos regularmente, mas com acompanhamento profissional se necessário.
-Evite dietas restritivas e foque em uma alimentação completa e nutritiva.""",
-];

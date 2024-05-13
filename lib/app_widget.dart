@@ -18,6 +18,8 @@ class AppWidget extends StatelessWidget {
         "/get_info": (_) => const GetInfoView(),
         "/result": (_) => const ResultView(),
       },
+
+      debugShowCheckedModeBanner: false,
     );
   }
 }

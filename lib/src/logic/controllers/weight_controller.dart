@@ -14,4 +14,6 @@ class WeightController extends ValueNotifier<String> {
       value = "";
     }
   }
+
+  reset() => value = "";
 }

@@ -1,8 +1,10 @@
+import 'package:bmi/src/logic/controllers/bmi_calculator.dart';
+import 'package:bmi/src/logic/models/stats_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../logic/controllers/height_controller.dart';
 import '../../logic/controllers/weight_controller.dart';
-import '../components/button/button_navigation.dart';
+import '../components/button/custom_button.dart';
 import '../components/button/hight_selector.dart';
 import '../components/button/number_button_builder.dart';
 import '../components/field/height_field.dart';
@@ -16,6 +18,7 @@ class GetInfoView extends StatelessWidget {
     // Controllers
     final heightController = HeightController();
     final weightController = WeightController();
+    final bmiController = BMICalculator();
 
     // Get Screen Size
     final Size size = MediaQuery.sizeOf(context);
@@ -63,10 +66,25 @@ class GetInfoView extends StatelessWidget {
             height: height * .02,
           ),
 
-          const ButtonNavigation(
-            rout: "/result",
-            label: "Next",
+          CustomButton(
             icon: Icons.arrow_right,
+            label: "Next",
+            callBack: () {
+              //
+              final double height = heightController.value;
+              final double weight =
+                  double.tryParse(weightController.value) ?? 0;
+
+              if (weight >= 20) {
+                final StatsModel model = bmiController(
+                  height: height,
+                  weight: weight,
+                );
+
+                weightController.reset();
+                Navigator.pushNamed(context, "/result", arguments: model);
+              }
+            },
           ),
         ],
       ),
