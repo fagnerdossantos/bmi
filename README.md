@@ -1,18 +1,22 @@
 # BMI CALCULATOR
 
- A BMI **(Body Mass Index)** APP calculator.<br>
- The application will indicate if you are **"Helthy"** or not based in your height and weight.
+ The **BMI Calculator** is an app designed to assist you in measuring your **BMI (Body Mass Index)** and providing valuable statistics and tips to help you maintain a healthy lifestyle.
 
-## Video
-> runing in emulator...
+ ## Features
+ - Easily measure your BMI with a simple interface.
+ - Access some statistics regarding your BMI.
+ - Receive tips to improve your BMI and overall health.
 
-https://user-images.githubusercontent.com/61123877/190505495-7c14aa27-22f2-415c-b447-ae1bc04139bc.mp4
 
-
-## Running
-In order to have all the dependencies run:<br>
+> In order to have all the dependencies run:<br>
 ``` flutter pub get```
 
 ## Specs
 Made using **Flutter** <br>
-Using Package: **Provider**
+Used Packages: **Flutter_SVG** and **GetIt**
+
+# Contributing
+Contributions are welcome! If you have ideas to enhance the BMI Calculator, feel free to open an issue or submit a pull request.
+
+# License
+This project is licensed under the [MIT License](https://github.com/fagnerdossantos/bmi/blob/main/LICENSE).

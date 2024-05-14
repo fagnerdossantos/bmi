@@ -1,14 +1,15 @@
+import 'package:bmi/src/providers/app_provider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../logic/controllers/weight_controller.dart';
 
 class WeightField extends StatelessWidget {
-  final WeightController controller;
-  const WeightField({super.key, required this.controller});
+  const WeightField({super.key});
 
   @override
   Widget build(BuildContext context) {
     //
+    final controller = getIt<WeightController>();
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

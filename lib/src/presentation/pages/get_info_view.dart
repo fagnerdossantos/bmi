@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../logic/controllers/height_controller.dart';
 import '../../logic/controllers/weight_controller.dart';
+import '../../providers/app_provider.dart';
 import '../components/button/custom_button.dart';
 import '../components/button/hight_selector.dart';
 import '../components/button/number_button_builder.dart';
@@ -16,9 +17,9 @@ class GetInfoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Controllers
-    final heightController = HeightController();
-    final weightController = WeightController();
-    final bmiController = BMICalculator();
+    final heightController = getIt<HeightController>();
+    final weightController = getIt<WeightController>();
+    final bmiController = getIt<BMICalculator>();
 
     // Get Screen Size
     final Size size = MediaQuery.sizeOf(context);
@@ -32,10 +33,10 @@ class GetInfoView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Height
-          Column(
+          const Column(
             children: [
-              HeightField(heightController: heightController),
-              HeightSelector(heightController: heightController),
+              HeightField(),
+              HeightSelector(),
             ],
           ),
 
@@ -44,7 +45,7 @@ class GetInfoView extends StatelessWidget {
           ),
 
           // Weight
-          WeightField(controller: weightController),
+          const WeightField(),
 
           SizedBox(
             height: height * .05,
@@ -56,10 +57,7 @@ class GetInfoView extends StatelessWidget {
             width: width,
 
             // color: Colors.red,
-            child: NumberButtonsBuilder(
-              size: size,
-              controller: weightController,
-            ),
+            child: NumberButtonsBuilder(size: size),
           ),
 
           SizedBox(

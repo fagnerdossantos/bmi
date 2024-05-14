@@ -1,17 +1,16 @@
+import 'package:bmi/src/providers/app_provider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../logic/controllers/height_controller.dart';
 
 class HeightField extends StatelessWidget {
-  const HeightField({
-    super.key,
-    required this.heightController,
-  });
-
-  final HeightController heightController;
+  const HeightField({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //
+    final heightController = getIt<HeightController>();
+
     return ValueListenableBuilder(
       valueListenable: heightController,
       builder: (_, value, __) {

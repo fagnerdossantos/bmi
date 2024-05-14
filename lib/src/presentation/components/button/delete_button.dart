@@ -1,12 +1,15 @@
 import 'package:bmi/src/logic/controllers/weight_controller.dart';
+import 'package:bmi/src/providers/app_provider.dart';
 import 'package:flutter/material.dart';
 
 class DeleteButton extends StatelessWidget {
-  final WeightController controller;
-  const DeleteButton({super.key, required this.controller});
+  const DeleteButton({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //
+    final controller = getIt<WeightController>();
+
     return TextButton.icon(
       // Action
       onPressed: controller.clear,

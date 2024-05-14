@@ -1,4 +1,5 @@
 import 'package:bmi/src/logic/controllers/weight_controller.dart';
+import 'package:bmi/src/providers/app_provider.dart';
 import 'package:flutter/material.dart';
 
 import 'delete_button.dart';
@@ -6,25 +7,20 @@ import 'number_button.dart';
 
 class NumberButtonsBuilder extends StatelessWidget {
   final Size size;
-  final WeightController controller;
-  const NumberButtonsBuilder({
-    super.key,
-    required this.size,
-    required this.controller,
-  });
+
+  const NumberButtonsBuilder({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {
     // Settings
+    final controller = getIt<WeightController>();
     const double spacing = 2.0;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         // Delete
-        DeleteButton(
-          controller: controller,
-        ),
+        const DeleteButton(),
 
         //
         const SizedBox(
