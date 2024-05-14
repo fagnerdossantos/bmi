@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
             //
             const TextNavigation(
               rout: "/get_info",
-              label: "Let's start",
+              label: "Vamos Começar",
               icon: Icons.start,
             ),
           ],

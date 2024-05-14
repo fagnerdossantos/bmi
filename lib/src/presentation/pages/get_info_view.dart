@@ -47,9 +47,7 @@ class GetInfoView extends StatelessWidget {
           // Weight
           const WeightField(),
 
-          SizedBox(
-            height: height * .05,
-          ),
+          SizedBox(height: height * .01),
 
           // Char buttons
           SizedBox(
@@ -66,7 +64,7 @@ class GetInfoView extends StatelessWidget {
 
           CustomButton(
             icon: Icons.arrow_right,
-            label: "Next",
+            label: "Próximo",
             callBack: () {
               //
               final double height = heightController.value;

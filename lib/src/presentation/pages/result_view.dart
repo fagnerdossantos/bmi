@@ -20,7 +20,7 @@ class ResultView extends StatelessWidget {
       // Bar
       appBar: AppBar(
         title: Text(
-          "Back",
+          "Voltar",
           style: TextStyle(color: Theme.of(context).colorScheme.secondary),
         ),
       ),
@@ -68,7 +68,7 @@ class ResultView extends StatelessWidget {
             TextButton.icon(
               onPressed: () => tipsBottomSheet(context, size, model),
               icon: const Icon(Icons.lightbulb),
-              label: const Text("Tips"),
+              label: const Text("Dicas"),
             ),
           ],
         ),
