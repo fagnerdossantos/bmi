@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SvgPicture.asset(
-              "images/bmi-bg.svg",
+              "assets/images/bmi-bg.svg",
               height: 250,
               width: double.infinity,
             ),
