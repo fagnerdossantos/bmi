@@ -15,6 +15,10 @@
 Made using **Flutter** <br>
 Used Packages: **Flutter_SVG** and **GetIt**
 
+## Video
+
+https://github.com/fagnerdossantos/bmi/assets/61123877/a4bb52fd-9e1c-4a8b-95d3-0e4c8abe3ad1
+
 # Contributing
 Contributions are welcome! If you have ideas to enhance the BMI Calculator, feel free to open an issue or submit a pull request.
 
